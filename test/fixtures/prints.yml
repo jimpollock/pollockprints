@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  image: MyString
+  name: MyString
+  process: MyString
+  paper: MyString
+  press: MyString
+  year: MyString
+
+two:
+  image: MyString
+  name: MyString
+  process: MyString
+  paper: MyString
+  press: MyString
+  year: MyString

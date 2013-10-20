@@ -1,0 +1,17 @@
+<div class="box">
+    <%= link_to (image_tag print.image), print %>
+    <p class="description">
+        <%= print.name %>
+    </p>
+    <p>
+        <strong>
+            <%= print.year %>
+        </strong>
+    </p>
+    <% if user_signed_in? %>
+        <p>
+          <%= link_to 'Edit', edit_print_path(print) %>
+          <%= link_to 'Destroy', print, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+    <% end %>
+</div>
