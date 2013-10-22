@@ -1,8 +1,9 @@
-<div class="row">
+<div class="container">
+	<div class="row">
 	
-	<div class="span6"> <%= image_tag (@print.image) %> </div>
+	<div class="span7"> <%= image_tag (@print.image) %> </div>
 
-  	<div class="span4"> <p><h3><%= @print.name %></h3></p>
+  	<div class="span5"> <p><h3><%= @print.name %></h3></p>
   	<p><h4><%= @print.year %></h4></p>
 
   	<p><%= @print.process %> print on <%= @print.paper %> paper. Printed on <%= @print.press %> press</p>
@@ -13,7 +14,7 @@
 			<%= link_to 'Back', prints_path %>
 		</p>
 	<% end %>
-
+</div>
 </div>
 </div>
 
