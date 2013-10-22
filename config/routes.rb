@@ -1,4 +1,6 @@
 Pollockprints::Application.routes.draw do
+  devise_for :views
+
   resources :prints
 
 

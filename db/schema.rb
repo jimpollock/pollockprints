@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131017130723) do
+ActiveRecord::Schema.define(:version => 20131022111855) do
 
   create_table "prints", :force => true do |t|
     t.string   "image"
@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(:version => 20131017130723) do
     t.string   "paper"
     t.string   "press"
     t.string   "year"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.date     "release_date"
+    t.string   "ebeans"
+    t.text     "paypal"
+    t.string   "size"
   end
 
   create_table "users", :force => true do |t|

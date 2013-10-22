@@ -1,4 +1,4 @@
-<%= form_for(@print) do |f| %>
+<%= simple_form_for(@print, html: { class: 'form-horizontal'}) do |f| %>
   <% if @print.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@print.errors.count, "error") %> prohibited this print from being saved:</h2>
@@ -11,31 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :process %><br />
-    <%= f.text_field :process %>
-  </div>
-  <div class="field">
-    <%= f.label :paper %><br />
-    <%= f.text_field :paper %>
-  </div>
-  <div class="field">
-    <%= f.label :press %><br />
-    <%= f.text_field :press %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br />
-    <%= f.text_field :year %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+    <%= f.input :image %>
+    
+    <%= f.input :name %>
+
+	<%= f.input :size %>
+    
+    <%= f.input :process %>
+
+    <%= f.input :paper %>
+
+    <%= f.input :press, :collection => ['Bookbinding', 'Washington Iron Hand', 'Vandercook 320g'] %>
+
+    <%= f.input :ebeans %>
+
+	<%= f.input :paypal %>
+
+	<%= f.input :release_date, { :start_year => 1995 } %>
+
+  <div class="form-actions">
+    <%= f.submit "Create", class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,35 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	
+	<div class="span6"> <%= image_tag (@print.image) %> </div>
 
-<p>
-  <b>Image:</b>
-  <%= @print.image %>
-</p>
+  	<div class="span4"> <p><h3><%= @print.name %></h3></p>
+  	<p><h4><%= @print.year %></h4></p>
 
-<p>
-  <b>Name:</b>
-  <%= @print.name %>
-</p>
+  	<p><%= @print.process %> print on <%= @print.paper %> paper. Printed on <%= @print.press %> press</p>
 
-<p>
-  <b>Process:</b>
-  <%= @print.process %>
-</p>
+	<% if user_signed_in? %>
+        <p>
+			<%= link_to 'Edit', edit_print_path(@print) %> |
+			<%= link_to 'Back', prints_path %>
+		</p>
+	<% end %>
 
-<p>
-  <b>Paper:</b>
-  <%= @print.paper %>
-</p>
-
-<p>
-  <b>Press:</b>
-  <%= @print.press %>
-</p>
-
-<p>
-  <b>Year:</b>
-  <%= @print.year %>
-</p>
+</div>
+</div>
 
 
-<%= link_to 'Edit', edit_print_path(@print) %> |
-<%= link_to 'Back', prints_path %>
+
