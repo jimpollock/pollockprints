@@ -1,11 +1,11 @@
 @import 'bootstrap';
 body{
-    padding-top: 60px;
+    padding-top: 50px;
+    padding-left: 0px;
 }
 
-container{
-  margin: 0 auto;
-}
+
+
 
 @import 'bootstrap-responsive';
 
@@ -24,9 +24,10 @@ container{
 
 /* Required for jQuery Masonry */
 
+
 .box {
     margin: 5px;
-    padding: 5px;
+    padding: 0px;
     font-size: 11px;
     line-height: 1.4em;
     float: left;

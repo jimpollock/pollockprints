@@ -2,7 +2,7 @@ class PrintsController < ApplicationController
   # GET /prints
   # GET /prints.json
   def index
-    @prints = Print.order("release_date DESC").page(params[:page]).per_page(4)
+    @prints = Print.order("release_date DESC").page(params[:page]).per_page(6)
 
     respond_to do |format|
       format.html # index.html.erb
