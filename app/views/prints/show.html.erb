@@ -8,8 +8,9 @@
 
   	<p><%= @print.process %> print on <%= @print.paper %> paper. Run of <%= @print.run_size %>. Printed on <%= @print.press %> press</p>
 
-	
-	<a href="http://expressobeans.com/public/detail.php/<%= @print.ebeans %>">Expressobeans Page</a>
+	<% unless @print.ebeans.blank? %>
+		<a href="http://expressobeans.com/public/detail.php/<%= @print.ebeans %>">Expressobeans Page</a>
+	<% end %>
 
 	<% if user_signed_in? %>
         <p>
