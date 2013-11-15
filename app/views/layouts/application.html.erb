@@ -12,15 +12,8 @@
             <% flash.each do |name, msg| %>
                 <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
             <% end %>
-</div>
-			<div id="container" class="js-masonry"
-			  data-masonry-options='{ "columnWidth": 50, "itemSelector": ".box" }'>
 	<%= yield %>
 	<%= render 'layouts/footer' %>
-</div>
-
-
-	
-
+	</div>
 </body>
 </html>

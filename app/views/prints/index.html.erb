@@ -1,9 +1,7 @@
-<div class="container"><%= will_paginate @prints %>
-<div id="container" class="js-masonry"
-  data-masonry-options='{ "columnWidth": 50, "itemSelector": ".box" }'>
+<div class="container">
+<%= will_paginate @prints %>
 <div id="prints">
   <%= render @prints %>
-</div>
 </div>
 </div>
 
