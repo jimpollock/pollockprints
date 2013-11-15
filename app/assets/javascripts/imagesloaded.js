@@ -1,5 +1,3 @@
-$(function(){
-
     // with jQuery
 	var $container = $('#container');
 
@@ -7,6 +5,3 @@ $(function(){
 	$container.imagesLoaded( function() {
 	     $container.masonry();
 	});
-    
-    
-});
