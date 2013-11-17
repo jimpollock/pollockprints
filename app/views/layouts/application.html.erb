@@ -9,7 +9,7 @@
 <body>
 	<%= render 'layouts/header' %>
 	<div id="container" class="js-masonry"
-	  data-masonry-options='{ "columnWidth": ".grid-sizer", "isFitWidth": true }'>
+	  data-masonry-options='{ "columnWidth": 60, "isFitWidth": true }'>
             <% flash.each do |name, msg| %>
                 <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
             <% end %>
